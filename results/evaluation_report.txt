@@ -1,0 +1,100 @@
+# Assignment 11 — Real-Time Voice-Controlled AI Application
+
+## 1. Introduction
+
+The objective of this assignment was to develop and evaluate a real-time voice-controlled AI application using Python.
+
+The developed application is called **Claude AI Voice Tutor**. It allows users to interact with artificial intelligence through spoken questions and spoken responses.
+
+The application uses Faster-Whisper for speech recognition, Anthropic Claude for generating responses, Piper for text-to-speech, and Silero VAD for detecting speech activity.
+
+## 2. System Architecture
+
+The application follows the processing pipeline:
+
+Microphone → Silero VAD → Faster-Whisper → Claude AI → Piper TTS → Speaker
+
+Silero VAD detects when the user begins and finishes speaking. Faster-Whisper converts the recorded speech into text. The text is sent to Claude, which generates an answer. Piper converts the answer into audio and plays it through the computer speakers.
+
+An experimental interruption mechanism monitors microphone input during audio playback.
+
+## 3. Response Latency Evaluation
+
+The application measures speech recognition time, AI response time, and speech-generation time.
+
+In one recorded interaction, the following results were obtained:
+
+| Component | Measured time |
+|---|---:|
+| Faster-Whisper | 0.609 seconds |
+| Claude AI | 3.300 seconds |
+| Piper TTS | 2.617 seconds |
+| Total processing | 6.527 seconds |
+
+The total excludes microphone recording and speaker playback.
+
+**Average of additional test interactions:** To be calculated after collecting the complete dataset.
+
+## 4. Speech Recognition Accuracy
+
+Speech recognition accuracy is evaluated using Word Error Rate (WER).
+
+Five prepared sentences are spoken under quiet conditions and repeated under noisy conditions. The recognized text is compared with the original sentences.
+
+**Quiet environment WER:** Pending measurement.
+
+**Noisy environment WER:** Pending measurement.
+
+## 5. Background Noise Evaluation
+
+The system is tested in both quiet and noisy conditions to evaluate how background sounds affect speech detection and transcription.
+
+**Observed results:** To be completed after testing.
+
+## 6. Voice Interruption Evaluation
+
+The application uses Silero VAD to detect speech while Claude is speaking.
+
+During initial testing, the system repeatedly triggered interruptions shortly after audio playback began. This caused Claude's answers to stop prematurely and led to additional unintended transcriptions.
+
+The exact cause has not yet been confirmed. Speaker feedback and unreliable recognition of short audio segments are possible contributing factors.
+
+**Headphone test results:** Pending.
+
+**Laptop speaker test results:** Pending.
+
+## 7. Microphone and Speaker Echo
+
+The application is tested using headphones and laptop speakers to investigate whether speaker audio causes false speech detections.
+
+The system does not currently implement acoustic echo cancellation.
+
+**Results:** Pending controlled comparison.
+
+## 8. Network Failure Evaluation
+
+The application requires internet connectivity to access the Claude API. Local speech recognition and speech synthesis can operate without the Claude connection once their models are installed.
+
+A network failure test will be conducted by temporarily disconnecting the internet and observing whether the application reports an error and recovers after reconnection.
+
+**Results:** Pending testing.
+
+## 9. End-of-Speech Detection
+
+Silero VAD is used to detect the start and end of user speech.
+
+The application currently uses an end-of-speech silence threshold of approximately 1.2 seconds.
+
+Tests will examine continuous speech, short pauses, and long pauses.
+
+**Results:** Pending testing.
+
+## 10. Conclusion
+
+The Claude AI Voice Tutor successfully demonstrates a speech-to-text, AI-response, and text-to-speech pipeline.
+
+Initial results confirm that the application can recognize spoken questions and generate relevant AI responses. The prototype also supports automatic speech detection and experimental interruption.
+
+Further evaluation is required to quantify speech recognition accuracy, test network recovery, and assess the reliability of interruptions and speaker echo handling.
+
+The most important identified improvement is preventing unintended interruptions during AI speech playback.

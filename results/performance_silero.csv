@@ -1,0 +1,8 @@
+timestamp,question,stt_seconds,ai_seconds,tts_generation_seconds,playback_seconds,processing_total,interrupted,status,error
+2026-10-22 03:12:11,What is robotics?,0.609,3.3,2.617,0.738,6.527,True,success,
+2026-10-22 03:12:18,We'll see you in the next video.,0.406,2.656,1.735,0.716,4.798,True,success,
+2026-10-22 03:12:24,Thanks for,0.385,1.95,1.689,0.736,4.024,True,success,
+2026-10-22 03:31:16,What is artificial intelligence?,0.604,3.535,2.617,5.205,6.756,True,success,
+2026-10-22 03:31:30,Do you think that you will overtake human?,0.536,3.117,1.729,2.324,5.383,True,success,
+2026-10-22 03:31:40,"Okay, then that's good",0.504,3.43,2.399,1.405,6.333,True,success,
+2026-10-22 03:32:06,Please save the name,7.303,3.066,1.718,8.725,12.086,False,success,

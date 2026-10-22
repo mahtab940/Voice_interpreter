@@ -1,0 +1,2 @@
+timestamp,question,stt_latency,ai_latency,tts_latency,processing_total,status
+2026-10-22 02:32:15,"Can you, what is robotics?",0.554,3.375,2.667,6.596,success

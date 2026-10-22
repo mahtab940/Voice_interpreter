@@ -1,0 +1,13 @@
+timestamp,question,stt_latency,ai_latency,tts_generation_latency,processing_total,interrupted,status
+2026-10-22 02:39:20,What is API?,0.541,3.208,2.445,6.194,True,success
+2026-10-22 02:39:27,,0.0,0.0,0.0,0.0,False,failed
+2026-10-22 02:39:47,Can you say about robotics?,0.493,2.854,2.267,5.614,True,success
+2026-10-22 02:39:51,,0.0,0.0,0.0,0.0,False,failed
+2026-10-22 02:43:03,What is artificial intelligence?,0.551,3.564,2.563,6.678,True,success
+2026-10-22 02:43:08,,0.0,0.0,0.0,0.0,False,failed
+2026-10-22 02:43:21,What is football?,0.461,3.095,2.399,5.955,True,success
+2026-10-22 02:43:23,,0.0,0.0,0.0,0.0,False,failed
+2026-10-22 02:43:33,And do you know who is missing?,0.499,3.346,1.74,5.585,True,success
+2026-10-22 02:43:40,,0.0,0.0,0.0,0.0,False,failed
+2026-10-22 02:44:05,Do you know who is Lionel Messi?,0.507,3.338,1.718,5.563,False,success
+2026-10-22 02:44:18,"Okay, and do you know who is Kimi Raikon is?",0.593,0.0,0.0,0.593,False,failed

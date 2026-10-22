@@ -1,0 +1,26 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# API keys
+.env
+.env.*
+!.env.example
+
+# Models
+*.onnx
+*.onnx.json
+*.pt
+
+# Generated audio
+*.wav
+*.mp3
+
+# System
+.DS_Store
+
+# Temporary files
+*.log
